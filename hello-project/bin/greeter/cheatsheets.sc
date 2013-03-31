@@ -15,4 +15,9 @@ object cheatsheets {
 
   println("2: " + getMapVal("a"))                 //> 2: 42
 
+//OR
+def getMapVal2(s: String): String = mymap.get(s).map("Found value: " + _).getOrElse("Value Not Found")
+                                                  //> getMapVal2: (s: String)String
+println("3: " + getMapVal2("a"))                  //> 3: Found value: 42
+println("3: " + getMapVal2("f"))                  //> 3: Value Not Found
 }

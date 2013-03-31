@@ -13,6 +13,10 @@ object cheatsheets {;import org.scalaide.worksheet.runtime.library.WorksheetSupp
     }
   };System.out.println("""getMapVal: (s: String)String""");$skip(35); 
 
-  println("2: " + getMapVal("a"))}
+  println("2: " + getMapVal("a"));$skip(109); 
 
+//OR
+def getMapVal2(s: String): String = mymap.get(s).map("Found value: " + _).getOrElse("Value Not Found");System.out.println("""getMapVal2: (s: String)String""");$skip(33); 
+println("3: " + getMapVal2("a"));$skip(33); 
+println("3: " + getMapVal2("f"))}
 }
