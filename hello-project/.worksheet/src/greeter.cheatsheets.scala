@@ -18,5 +18,12 @@ object cheatsheets {;import org.scalaide.worksheet.runtime.library.WorksheetSupp
 //OR
 def getMapVal2(s: String): String = mymap.get(s).map("Found value: " + _).getOrElse("Value Not Found");System.out.println("""getMapVal2: (s: String)String""");$skip(33); 
 println("3: " + getMapVal2("a"));$skip(33); 
-println("3: " + getMapVal2("f"))}
+println("3: " + getMapVal2("f"));$skip(70); 
+
+val mixedList = List("a", 1, 2, "b", 19, 42.0);System.out.println("""mixedList  : List[Any] = """ + $show(mixedList ));$skip(107);  //this is a List[Any]
+val results = mixedList collect {
+  case s: String => "String:" + s
+  case i: Int => "Int:" + i.toString
+};System.out.println("""results  : List[String] = """ + $show(results ))}
+
 }
